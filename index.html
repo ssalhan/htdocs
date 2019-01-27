@@ -10,7 +10,6 @@
 </head>
 <body id="top">
 <!-- ################################################################################################ --> 
-<!-- New Comment-->
 <div class="wrapper row0">
   <div id="topbar" class="clear"> 
     <!-- ################################################################################################ -->
@@ -20,13 +19,17 @@
         <li><a href="ContactUs.html">Contact Us</a></li>
         <li> Login:
 			<a>
-			<form method="Post" class="moveinlineblack">
+			<form method="POST" action="login.php" class="moveinlineblack">
 					<select>
 						<option value="-1" >select user type</option>
 						<option value="Student">Student</option>
 						<option value="Teacher">Teacher</option>
 						<option value="Contacts">Contacts</option>
+						<input type="submit" value="Submit request" />
 					</select>
+					<?php
+						include "login.php";
+					?>
 			</form>
 			</a>
 		</li>	
