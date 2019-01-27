@@ -1,5 +1,21 @@
 <?php
-$con=mysql_connect("localhost","root","");
+if(isset($_POST['submit'])){
+	$userType = $_POST['userType'];
+	
+	if($userType == 'Student') {
+		header("Location:https://www.bbc.com");
+	}
+	elseif ($userType == 'Teacher') {
+		header("Location:https://www.google.com");
+	}
+	else {
+		header("Location:https://www.yahoo.com");
+	}
+}
+
+?>
+
+/* $con=mysql_connect("localhost","root","");
 if(!$con){ 
 	echo'Unable to establish connection '.mysql_error();
 }
@@ -9,6 +25,7 @@ if(!$db)
 {
 	echo'Database not found '.mysql_error();
 }
+
 if (isset($_post['Submit'])){
 $type=$_post['type'];
 $un=$_post['username'];
@@ -16,6 +33,9 @@ $pw=$_post['password'];
 
 $query="select * from login where username='$username' and password='$password'and type='$user_type'";
 $result=mysql_query($query);
+
+//  To redirect form on a particular page
+header("Location:https://www.bbc.com/");
 
 while($row=mysql_fetch_array($result)){
 	if($row=['username']==$username && $row['password']==$password && $row['type']='Teacher'){
@@ -26,8 +46,7 @@ while($row=mysql_fetch_array($result)){
 		header('Location: Contacts.html');
 		}
 	}
-}
-?>
+} */
 
 
 
@@ -63,40 +82,4 @@ while($row=mysql_fetch_array($result)){
 	</table>
 </form>
 </body>
-<<<<<<< HEAD
 </html> -->
-
-=======
-</html>
-
-<?php
-$con=mysql_connect("localhost","root");
-if(!$con){ 
-	echo'Unable to establish connection '.mysql_error();
-}
-else{
-	$db=mysql_select_db('vyners','login',$con);
-if(!$db)
-{
-	echo'Database not found '.mysql_error();
-}
-if (isset($_post['Submit'])){
-$type=$_post['type'];
-$un=$_post['username'];
-$pw=$_post['password'];
-
-$query="select * from login where username='$username' and password='$password'and type='$user_type'";
-$result=mysql_query($query);
-
-while($row=mysql_fetch_array($result)){
-	if($row=['username']==$username && $row['password']==$password && $row['type']='Teacher'){
-		header('Location: indexTeacher.html');
-	}elseif($row=['username']==$username && $row['password']==$password && $row['type']='Student'){
-		header('Location: indexStudent.html');
-	}elseif($row=['username']==$username && $row['password']==$password && $row['type']='Contacts'){
-		header('Location:indexAlumni.html');
-		}
-	}
-}
-?>
->>>>>>> 58a1019e1d3190c37d799102e36d356b636ca92c
