@@ -20,7 +20,7 @@
         <li> Login:
 			<a>
 			<form action="index.php" method="POST" class="moveinlineblack">
-					<select>
+					<select id="userType" name="userType" placeholder='userType' type='text' value="">
 						<option value="-1" >select user type</option>
 						<option value="Student">Student</option>
 						<option value="Teacher">Teacher</option>
