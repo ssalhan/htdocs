@@ -19,26 +19,36 @@
         <li><a href="ContactUs.html">Contact Us</a></li>
         <li> Login:
 			<a>
+			
+			
+			
 			<form action="index.php" method="POST" class="moveinlineblack">
-					<select id="userType" name="userType" placeholder='userType' type='text' value="">
+					<select class="moveinlineblack" id="userType" name="userType" placeholder='userType' type='text' value="">
 						<option value="-1" >select user type</option>
 						<option value="Student">Student</option>
 						<option value="Teacher">Teacher</option>
 						<option value="Contacts">Contacts</option>
 					</select> 
+									
 					
-					
+	
 			
-					<input id='btn' name="submit" type='submit' value='Submit'>
-					
+						<input class="moveinlineblack" id='btn' name="submit" type="submit" value="OK" />
+			
 					<?php
-						include "login.php";
+						if(isset($_POST['submit'])){
+							$userType = $_POST['userType'];
+							header("Location:login.php");	
+							}
 					?>
+					
 			</form>
+		
 			</a>
+			
 		</li>	
 			
-			
+
 		
 
       </ul>
