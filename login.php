@@ -25,26 +25,22 @@
 	<?php
 
 					
-						if(isset($_POST['submit'])){
-							$userType = $_POST['userType'];
-							header("Location:login.php");	
-							}
-					
+				
 	
 
-/* if(isset($_POST['submit'])){
+if(isset($_POST['submit'])){
 	$userType = $_POST['userType'];
 	
 	if($userType == 'Student') {
-		header("Location:https://www.bbc.com");
+		header("Location: indexStudent.html");
 	}
 	elseif ($userType == 'Teacher') {
-		header("Location:https://www.google.com");
+		header("Location: indexTeacher.html");
 	}
 	else {
-		header("Location:https://www.yahoo.com");
+		header("Location: indexAlumni.html");
 	}
-} */
+}
 
 // $con=mysqli_connect("localhost","root","");
 // $con=mysqli_connect("localhost", "root", "", "vyners");
